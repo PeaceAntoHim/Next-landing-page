@@ -1,8 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Important 
+you have see all dependencies in package.json. to see version i use.
+
 ## Getting Started
 
 First, run the development server:
+
+Berfore that you can choose to use yarn or npm if you want use npm write "npm install" in CLI. But if you want to use yarn you can write "yarn" in CLI
 
 ```bash
 npm run dev
