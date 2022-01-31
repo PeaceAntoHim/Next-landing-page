@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Source Sans Pro", "ui-sans-serif", "system-ui"],
+        mono: [ "IBM Plex Mono", "ui-monospace"]
+      },
       color: {
         yellow: {
           "50": "#FFFDEB",
