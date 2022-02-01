@@ -12,7 +12,7 @@ export default function Hero() {
                     <div className="text-center mt-20">
                         <h1 className="text-3xl text-white font-semibold font-mono w-8/12 mx-auto leading-relaxed">{intro1}</h1>
                         <p className="text-white text-opacity-60 text-lg w-4/12 mx-auto mt-6 leading-relaxed">{intro2}</p>
-                    <Button variant="yellow" className="mt-14">Learn</Button>
+                    <Button pill variant="yellow" className="mt-14">Learn</Button>
                 </div>
             </div>
       </div>
