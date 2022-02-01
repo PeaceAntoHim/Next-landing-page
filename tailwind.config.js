@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -8,18 +10,18 @@ module.exports = {
         sans: ["Source Sans Pro", "ui-sans-serif", "system-ui"],
         mono: [ "IBM Plex Mono", "ui-monospace"]
       },
-      color: {
-        yellow: {
-          "50": "#FFFDEB",
-          "100": "#FEFAD7",
-          "200": "#FEF5AA",
-          "300": "#FDF181",
-          "400": "#FDEC59",
-          "500": "#FCE72D",
-          "600": "#ECD503",
-          "700": "#B09F02",
-          "800": "#746802",
-          "900": "#3C3601"
+      colors: {
+        "yellow": {
+          "50": "#FEFDEC",
+          "100": "#FCFBD4",
+          "200": "#F9F7AF",
+          "300": "#F5F384",
+          "400": "#F2F059",
+          "500": "#EFED32",
+          "600": "#D5D211",
+          "700": "#A19E0D",
+          "800": "#6D6B09",
+          "900": "#343304"
         }
       }
     },
@@ -27,5 +29,15 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+        const utilities = {
+          ".bg-hero": {
+            "background-image": "url(/hero.png)"
+          }
+        };
+
+        addUtilities(utilities);
+     })
+  ],
 }
