@@ -11,7 +11,10 @@ module.exports = {
         mono: [ "IBM Plex Mono", "ui-monospace"]
       },
       colors: {
-        skill: "#F7F7FB",
+        primarygray: {
+          DEFAULT: "#F7F7FB",
+          200: "#E8E8FB"
+        },
         "yellow": {
           "50": "#FEFDEC",
           "100": "#FCFBD4",
