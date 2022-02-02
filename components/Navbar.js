@@ -1,8 +1,14 @@
 import Nav from "./Nav";
 import Logo from "./Logo";
 import Button from "./Button";
+import { useState } from "react";
+import classnames from "classnames";
 
 export default function Navbar() {
+
+    const [offCanvas, setOffCanvas] = useState(false);
+
+
     return (
         <>
             <div className="flex items-center py-10">
@@ -16,11 +22,12 @@ export default function Navbar() {
                     <Button href="#contact" pill variant="outline-yellow">Contact</Button>
                 </div>
                 <div className="w-9/12 md:hidden text-right">
-                    <img src="/menu.svg" className="inline-block" />
+                    <img src="/menu.svg" className="inline-block" onClick={() => setOffCanvas(true)} />
                 </div>
             </div>
 
-            <div className="fixed bg-white z-10 right-0 top-0 h-full w-full p-10">
+            <div className={classnames("fixed bg-white z-10 top-0 h-full w-full p-10 md:hidden transition-all", offCanvas ? "right-0" : "-right-full")}>
+                <img src="/x.svg" className="absolute top-8 right-8 w-8" onClick={() => setOffCanvas(false)} />
                 <Nav
                     scheme="dark"
                     dir="vertical"

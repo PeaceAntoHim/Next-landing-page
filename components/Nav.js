@@ -1,12 +1,11 @@
 import NavItem from "../components/Navitem";  
 import classnames from "classnames";
 
-export default function Nav({ dir, scheme }) {
+export default function Nav({ dir, scheme, onClick }) {
     const dirs = {
         horizontal: "justify-center space-x-10",
         vertical: "flex-col space-y-6"
     }
-    
     const pickedDir = dirs[dir];
 
     return(
