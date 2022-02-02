@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="fixed bg-white z-10 right-0 top-0 h-full w-full p-10">
                 <Nav
                     scheme="dark"
-                    dir="veritcal"
+                    dir="vertical"
                 />
             </div>
         </>

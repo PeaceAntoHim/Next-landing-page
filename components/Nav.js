@@ -4,7 +4,7 @@ import classnames from "classnames";
 export default function Nav({ dir, scheme }) {
     const dirs = {
         horizontal: "justify-center space-x-10",
-        verical: "flex-col space-y-6"
+        vertical: "flex-col space-y-6"
     }
     
     const pickedDir = dirs[dir];
